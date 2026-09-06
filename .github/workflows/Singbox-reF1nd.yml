@@ -13,7 +13,7 @@ on:
         description: '选择编译分支'
         type: choice
         required: true
-        default: 'reF1nd-testing'
+        default: 'reF1nd-stable'
         options:
           - reF1nd-testing
           - reF1nd-stable
