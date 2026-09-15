@@ -7,9 +7,9 @@ on:
         description: '选择编译分支/Tag'
         type: choice
         required: true
-        default: 'Main'
+        default: 'Meta'
         options:
-          - Main
+          - Meta
           - Prerelease
       custom_version:
         description: '输入版本号（留空则自动获取）'
@@ -28,8 +28,8 @@ jobs:
         run: |
           UPSTREAM_REPO="https://github.com/MetaCubeX/mihomo.git"
           REF="${{ github.event.inputs.source_ref }}"
-          if [ "$REF" = "Main" ]; then
-            BRANCH="Main"
+          if [ "$REF" = "Meta" ]; then
+            BRANCH="Meta"
           else
             BRANCH="Prerelease"
           fi
